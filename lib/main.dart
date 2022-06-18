@@ -45,10 +45,17 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Disease Locations'),
+        appBar:PreferredSize(
+          preferredSize: Size.fromHeight(100.0), // here the desired height
+          child:  AppBar(
+          title: const Text('DISEASE IDENTIFICATION AND MONITORING \n Highest cases:Bangalore - Corona-1.5L Dengue-1185 and active cases-648 \n Lowest Cases:Agumbe - Corona-587 Dengue-11 and Active cases-0'),
+          toolbarHeight:100.0,
           backgroundColor: Colors.green[700],
+          ),
         ),
+        
+        
+       
         body: GoogleMap(
           onMapCreated: _onMapCreated,
           initialCameraPosition: const CameraPosition(
